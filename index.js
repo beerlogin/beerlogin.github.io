@@ -22,3 +22,18 @@ document.addEventListener("scroll", function() {
         });
     }
 });
+
+const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Отменяем стандартное поведение ссылки
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' }); // Плавная прокрутка к элементу
+        targetElement.classList.add('highlight'); // Добавляем класс подсветки
+        setTimeout(() => {
+            targetElement.classList.remove('highlight'); // Убираем класс через 1 секунду
+        }, 1000);
+    });
+});
