@@ -1,249 +1,311 @@
+/* ========================= */
+/*       Общие настройки     */
+/* ========================= */
+
 html {
-    scroll-behavior: smooth; /* Плавная прокрутка */
+    scroll-behavior: smooth; /* Плавная прокрутка при переходах по якорям на странице */
 }
 
 body {
-    font-family: "Rubik", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* Светлая тема */
+    font-family: "Rubik", sans-serif; /* Установка шрифта Rubik для всего тела страницы */
+    margin: 0; /* Убираем стандартные отступы у body */
+    padding: 0; /* Убираем стандартные внутренние отступы у body */
+    background-color: #f4f4f4; /* Светлый фон для светлой темы */
     color: #333; /* Цвет текста для светлой темы */
 }
 
 body.theme-dark {
-    background-color: #121212; /* Тёмный фон */
+    background-color: #121212; /* Тёмный фон для тёмной темы */
     color: #e0e0e0; /* Цвет текста для тёмной темы */
 }
 
+/* ========================= */
+/*         Контейнеры        */
+/* ========================= */
+
 .container {
-    max-width: 90%;
-    margin: auto;
-    padding: 20px;
-    background: white; /* Светлая тема */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Максимальная ширина контейнера 90% от ширины экрана */
+    margin: auto; /* Центрируем контейнер по горизонтали */
+    padding: 20px; /* Внутренние отступы контейнера */
+    background: white; /* Фон контейнера для светлой темы */
+    border-radius: 8px; /* Скругление углов контейнера */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для создания эффекта глубины */
 }
 
 body.theme-dark .container {
     background: #1e1e1e; /* Фон контейнера в тёмной теме */
 }
 
-@media (min-width: 576px) { /* For small devices like tablets */
-    .container {
-        max-width: 80%;
-    }
-}
-
-@media (min-width: 768px) { /* For medium devices like laptops */
-    .container {
-        max-width: 60%;
-    }
-}
-
-@media (min-width: 992px) { /* For large devices like desktops */
-    .container {
-        max-width: 50%;
-    }
-}
-
-@media (min-width: 1200px) { /* For extra-large devices */
-    .container {
-        max-width: 600px; /* Fixed width for very large screens */
-    }
-}
-
 .subcontainer {
-    margin: auto;
-    padding: 20px;
-    background: white; /* Светлая тема */
+    margin: auto; /* Центрируем подконтейнер по горизонтали */
+    padding: 20px; /* Внутренние отступы подконтейника */
+    background: white; /* Фон подконтейника для светлой темы */
 }
 
 body.theme-dark .subcontainer {
-    background: #2c2c2c; /* Фон подконтейнера в тёмной теме */
+    background: #2c2c2c; /* Фон подконтейника в тёмной теме */
 }
 
+/* ========================= */
+/* Адаптивные медиа-запросы  */
+/* ========================= */
+
+@media (min-width: 576px) {
+    /* Для небольших устройств, таких как планшеты */
+    .container {
+        max-width: 80%; /* Максимальная ширина контейнера 80% на небольших экранах */
+    }
+}
+
+@media (min-width: 768px) {
+    /* Для средних устройств, таких как ноутбуки */
+    .container {
+        max-width: 60%; /* Максимальная ширина контейнера 60% на средних экранах */
+    }
+}
+
+@media (min-width: 992px) {
+    /* Для больших устройств, таких как настольные компьютеры */
+    .container {
+        max-width: 50%; /* Максимальная ширина контейнера 50% на больших экранах */
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Для очень больших устройств */
+    .container {
+        max-width: 600px; /* Фиксированная ширина контейнера для очень больших экранов */
+    }
+}
+
+/* ========================= */
+/*      Заголовок и аватар   */
+/* ========================= */
+
 header {
-    display: flex; 
-    align-items: center; 
+    display: flex; /* Используем flexbox для выравнивания элементов в заголовке */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
 }
 
 .header-text {
-    margin-left: 20px; 
+    margin-left: 20px; /* Отступ слева для текста заголовка */
 }
 
 .avatar {
-    width: 150px;
-    height: 150px; 
-    border-radius: 50%; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 150px; /* Ширина аватара */
+    height: 150px; /* Высота аватара */
+    border-radius: 50%; /* Скругление углов аватара до круга */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для аватара для создания эффекта глубины */
 }
 
-h1, p {
-    margin: 5px 0; 
+/* ========================= */
+/*     Заголовки и текст     */
+/* ========================= */
+
+h1,
+p {
+    margin: 5px 0; /* Отступы сверху и снизу для заголовков h1 и параграфов p */
 }
 
 h3 {
-    margin-top: 15px;
-    color: #333; /* Цвет текста для светлой темы */
+    margin-top: 15px; /* Отступ сверху для заголовков h3 */
+    color: #333; /* Цвет текста для светлой темы заголовков h3 */
 }
 
 body.theme-dark h3 {
-    color: #e0e0e0; /* Цвет текста для тёмной темы */
+    color: #e0e0e0; /* Цвет текста заголовков h3 в тёмной теме */
 }
 
+/* ========================= */
+/*         Ссылки            */
+/* ========================= */
+
 .links {
-    display: flex; 
-    justify-content: flex-end; 
-    margin-top: -7px;
-    margin-left: 25px;
+    display: flex; /* Используем flexbox для выравнивания ссылок по горизонтали */
+    justify-content: flex-end; /* Выравнивание ссылок по правому краю контейнера */
+    margin-top: -7px; /* Отрицательный отступ сверху для уменьшения расстояния между элементами */
+    margin-left: 25px; /* Отступ слева для блока ссылок */
 }
 
 .links h2 {
-    text-align: left; 
+    text-align: left; /* Выравнивание текста заголовка ссылок влево */
 }
 
 .links ul {
-    list-style-type: none; 
-    padding: 0; 
+    list-style-type: none; /* Убираем маркеры списка у ненумерованных списков ссылок */
+    padding: 0; /* Убираем внутренние отступы у списка ссылок */
 }
 
 .links li {
-    display: inline; 
-    margin-right: 10px; 
+    display: inline; /* Отображаем элементы списка в одну строку (inline) */
+    margin-right: 10px; /* Отступ справа между элементами списка ссылок */
 }
 
 .links a {
-    text-decoration: none; 
+    text-decoration: none; /* Убираем подчеркивание у ссылок по умолчанию */
 }
 
 .links a:hover {
-    text-decoration: underline; 
+    text-decoration: underline; /* Подчеркивание при наведении на ссылки для визуального эффекта взаимодействия */
 }
 
+/* ========================= */
+/*         Кнопки            */
+/* ========================= */
+
 .button-style {
-    margin-top: 6px; 
-    display: inline-block; 
-    padding: 10px 15px; 
-    border-radius: 10px; 
-    border: 2px solid black; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 6px; /* Отступ сверху для кнопки стиля button-style*/
+    display: inline-block; /* Отображаем кнопку как блочный элемент с возможностью выравнивания по горизонтали*/
+    padding: 10px 15px; /* Внутренние отступы кнопки (сверху/снизу и слева/справа)*/
+    border-radius: 10px; /* Скругление углов кнопки*/
+    border: 2px solid black; /* Черная рамка вокруг кнопки*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для кнопки для создания эффекта глубины*/
 }
 
 body.theme-dark .button-style {
-    border-color: #e0e0e0; /* Цвет рамки кнопки в тёмной теме */
+    border-color: #e0e0e0; /* Цвет рамки кнопки в тёмной теме (светло-серый)*/
 }
 
 .button-style:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3; /* Цвет фона кнопки при наведении в светлой теме (синий)*/
 }
 
 body.theme-dark .button-style:hover {
-    background-color: #007bff; /* Цвет кнопки при наведении в тёмной теме */
+    background-color: #007bff; /* Цвет фона кнопки при наведении в тёмной теме (светло-синий)*/
 }
 
+/* ========================= */
+/*         Кнопка GitHub     */
+/* ========================= */
+
 .github {
-    background-color: white; 
-    color: black; 
+    background-color: white; /* Фон кнопки GitHub в светлой теме (белый)*/
+    color: black; /* Цвет текста кнопки GitHub в светлой теме (черный)*/
 }
 
 body.theme-dark .github {
-    background-color: #444; /* Фон кнопки GitHub в тёмной теме */
-    color: white; /* Цвет текста кнопки GitHub в тёмной теме */
+    background-color: #444; /* Фон кнопки GitHub в тёмной теме (темно-серый)*/
+    color: white; /* Цвет текста кнопки GitHub в тёмной теме (белый)*/
 }
 
 .github:hover {
-    background-color: rgb(218, 218, 218); 
+    background-color: rgb(218, 218, 218); /* Цвет фона кнопки GitHub при наведении в светлой теме (светло-серый)*/
 }
 
 body.theme-dark .github:hover {
-    background-color: #555; /* Цвет кнопки GitHub при наведении в тёмной теме */
+    background-color: #555; /* Цвет фона кнопки GitHub при наведении в тёмной теме (серый)*/
 }
+
+/* ========================= */
+/*         Иконки            */
+/* ========================= */
 
 .icon {
-    width: 32px; 
-    height: 32px; 
+    width: 32px; /* Ширина иконок*/
+    height: 32px; /* Высота иконок*/
 }
+
+/* ========================= */
+/*      Переключатель темы   */
+/* ========================= */
 
 #theme-toggle {
-    background: none;
-    border: none;
-    padding: 0;
-    padding-left: 20px;
-    cursor: pointer;
+    background: none; /* Убираем фон у кнопки переключения темы*/
+    border: none; /* Убираем рамку у кнопки переключения темы*/
+    padding: 0; /* Убираем внутренние отступы у кнопки переключения темы*/
+    padding-left: 20px; /* Добавляем отступ слева к кнопке переключения темы*/
+    cursor: pointer; /* Изменяем курсор на указатель при наведении на кнопку переключения темы*/
 }
 
-#theme-toggle:focus {
+#theme-toggle :focus {
+    /* Убираем обводку при фокусе на кнопке переключения темы*/
     outline: none;
 }
 
 body.theme-dark #theme-toggle img {
-    filter: invert(1); /* Инвертируем цвета иконки */
+    /* Применяем инверсию цвета к изображению внутри кнопки переключения темы в тёмной теме*/
+    filter: invert(1);
 }
 
-/* Article */
+/* ========================= */
+/*         Стиль статьи      */
+/* ========================= */
+
 .project-article {
-    margin-top: 20px;
+    margin-top: 20px; /* Отступ сверху для статьи проекта*/
 }
 
 .project-article h3 {
-    margin-top: 15px;
-    color: #333;
+    margin-top: 15px; /* Отступ сверху заголовка h3 статьи проекта*/
 }
 
 .project-article p {
-    line-height: 1.6;
+    line-height: 1.6; /* Межстрочный интервал параграфов статьи проекта*/
 }
 
 .project-article ul {
-    list-style-type: disc;
-    margin-left: 20px;
+    list-style-type: disc; /* Тип маркера списка - диск*/
+    margin-left: 20px; /* Отступ слева у списка статьи проекта*/
 }
 
 .project-content {
-    display: flex;
-    align-items: flex-start; /* Align items at the start */
+    display: flex; /* Используем flexbox для выравнивания содержимого проекта*/
+    align-items: flex-start; /* Выравниваем элементы по верхнему краю*/
 }
 
 .project-content p {
-    flex: 1; /* Take up available space */
-    margin-right: 20px; /* Space between text and image */
+    flex: 1; /* Параграф занимает доступное пространство*/
+    margin-right: 20px; /* Отступ справа между текстом и изображением проекта*/
 }
 
 .project-image {
-    margin-right: -40%;
-    margin-top: -10%;
-    width: 90%; /* Adjust as needed */
-    border-radius: 20px; /* Rounded corners */
+    width: 90%; /* Ширина изображения проекта*/
+    border-radius: 20px; /* Скругление углов изображения проекта*/
+}
+
+/* Изображение ПРАВЕЕ */
+.righter {
+    margin-right: -40%; /* Отрицательный отступ справа изображения проекта*/
+    margin-top: -10%; /* Отрицательный отступ сверху изображения проекта*/
+}
+
+/* Изображение ЛЕВЕЕ */
+.lefter {
+    margin-left: -40%; /* Отрицательный отступ справа изображения проекта*/
+    margin-top: -10%; /* Отрицательный отступ сверху изображения проекта*/
 }
 
 .custom-divider {
-    border: none; /* Убираем стандартные границы */
-    height: 2px; /* Высота разделителя */
-    background-color: #4CAF50; /* Цвет фона (разделителя) */
-    margin: 20px 0; /* Отступы сверху и снизу */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+    border: none; /* Убираем стандартные границы разделителя*/
+    height: 2px; /* Высота разделителя*/
+    background-color: #4caf50; /* Цвет фона разделителя (зеленый)*/
+    margin: 20px 0; /* Отступы сверху и снизу разделителя*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень разделителя для эффекта глубины*/
 }
 
 .spacer {
     height: 100px; /* Высота пробела (можно настроить) */
 }
 
-/* Fade in */
+/* ========================= */
+/*         Эффекты           */
+/* ========================= */
 
+/* Fade in - Эффект появления */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0; /* Начальная непрозрачность элемента */
+    transform: translateY(20px); /* Начальное смещение вниз */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавный переход непрозрачности и смещения */
 }
 
 .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Полная непрозрачность элемента */
+    transform: translateY(0); /* Элемент возвращается на место */
 }
 
-/* Highlight */
+/* Highlight - Подсветка */
 .highlight {
-    border: 5px solid yellow; /* Жёлтая рамка */
-    border-radius: 2px;
-    transition: border 0.5s ease; /* Плавный переход */
+    border: 5px solid yellow; /* Жёлтая рамка вокруг выделенного элемента */
+    border-radius: 2px; /* Скругление углов выделенного элемента */
+    transition: border 0.5s ease; /* Плавный переход цвета рамки */
 }
