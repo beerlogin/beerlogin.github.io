@@ -33,7 +33,7 @@ body.theme-dark {
 }
 
 body.theme-dark .container {
-    background: #1e1e1e; /* Фон контейнера в тёмной теме */
+    background: #2c2c2c; /* Фон контейнера в тёмной теме */
 }
 
 .subcontainer {

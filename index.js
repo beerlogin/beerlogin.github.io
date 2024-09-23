@@ -3,6 +3,10 @@ button.addEventListener('click', () => {
     document.body.classList.toggle('theme-dark');
 });
 
+const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+console.log(isDarkMode ? 'Тёмный режим включен.' : 'Тёмный режим выключен.');
+if (isDarkMode) document.body.classList.toggle('theme-dark');
+
 document.addEventListener("scroll", function() {
     const elements = document.querySelectorAll('.fade-in');
     const windowHeight = window.innerHeight;
