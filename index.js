@@ -4,7 +4,6 @@ button.addEventListener('click', () => {
 });
 
 const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-console.log(isDarkMode ? 'Тёмный режим включен.' : 'Тёмный режим выключен.');
 if (isDarkMode) document.body.classList.toggle('theme-dark');
 
 document.addEventListener("scroll", function() {
